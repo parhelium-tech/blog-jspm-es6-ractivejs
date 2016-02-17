@@ -1,0 +1,45 @@
+.container {
+  text-align: center;
+}
+
+.form-control {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.send {
+  width: 250px;
+}
+
+.cancel {
+  width: 125px;
+  margin-left: 25px;
+}
+
+.head, .sub {
+  margin-bottom: 35px;
+}
+
+.head {
+  font-size: 2em;
+}
+
+.sub {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.empty-form{
+    border: solid 1px red;
+}
+
+.filled-form {
+    border: solid 1px green;
+}
+
+.alert {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 400px;
+}

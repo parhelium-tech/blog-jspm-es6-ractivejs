@@ -1,0 +1,45 @@
+<div class='container'>
+ <p class='head'>Do you want us to send our offer to you?</p>
+ {{#if !isVisible}}
+  <button class='btn btn-default btn-lg' on-click='showForm'>Yes I do</button>
+ {{else}}
+ <form>
+  <div class="form-group">
+   <label for="name" class='labels'>Your name</label><br>
+   <input type="text" class="form-control {{class}}" id="userName" placeholder="John Smith" value='{{name}}'>
+  </div>
+  <div class="form-group">
+   <label for="exampleInputEmail1">E-mail address</label><br>
+   <input type="text" class="form-control {{class}}" id="userEmail" placeholder="johnsmith@example.com" value='{{email}}'>
+  </div>
+  <div class="form-group">
+   <label for="phoneNumber">Phone number</label><br>
+   <input type="tel" class="form-control" placeholder="0 800 911 1488" value='{{phoneNumber}}'>
+  </div>
+  <div class="checkbox">
+   <label>
+    <input type="checkbox" on-click='websiteExists'> Check if you have a website
+   </label>
+ </div>
+ {{#if userHasWebsite}}
+  <div class="form-group">
+   <label for="websiteAddress">Website URL</label>
+   <input type="text" class="form-control" id="websiteAddress" placeholder="http://example.com" value='{{url}}'>
+  </div>
+ {{/if}}
+  <button class="btn btn-primary send" on-click='submitForm'>Send</button>
+  <button class="btn btn-danger cancel" on-click='showForm'>Cancel</button>
+ </form>
+ {{#if success}}
+  <div class='alert alert-success'>
+   <p>Thank you for registration.<br> We will contact you very soon.
+ </p>
+ </div>
+ {{/if}}
+ {{#if registrationFailed}}
+  <div class='alert alert-danger'>
+  <p>Please fill all required fields.</p>
+ </div>
+ {{/if}}
+ {{/if}}
+</div>
